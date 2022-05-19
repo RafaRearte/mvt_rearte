@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>Document</title>
+</head>
+<body>
+    <hr><hr>
+    <table class="table">
+        <h1>This is my family</h1>
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Relation</th>
+            <th scope="col">Age</th>
+            <th scope="col">Date of birth</th>
+            <th scope="col">Occupation</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for Family in familiares %}
+            <tr>
+            <th scope="row">{{ Family.id }}</th>
+            <td>{{Family.name}}</td>
+            <td>{{Family.relation}}</td>
+            <td>{{Family.age}}</td>
+            <td>{{Family.birth_date}}</td>
+            <td>{{Family.occupation}}</td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <hr><hr>
+</body>
+
+</html>
